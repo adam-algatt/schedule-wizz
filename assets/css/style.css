@@ -20,21 +20,45 @@ textarea{
   border-radius: 0;
   border-bottom: 10px solid black;
 }
-
+/* delete .description class once implementation of appendchild has been added to change description styling based on current time/date*/
 .description{
   white-space: pre-wrap;
   list-style: none;
+  background-color: green;
+  height: 80px;
+}
+/* delete .description class once implementation of appendchild has been added to change description styling based on current time/date*/
+
+.description-future{
+  white-space: pre-wrap;
+  list-style: none;
+  background-color: green;
+  height: 80px;
+}
+.description-present{
+  white-space: pre-wrap;
+  list-style: none;
+  background-color: orange;
+  height: 80px;
+}
+.description-past{
+  white-space: pre-wrap;
+  list-style: none;
+  background-color: gray;
+  height: 80px;
 }
 
 .time-block{
   text-align: center;
   border-radius: 15px;
+  height: 80px;
 }
 
 .row {
   white-space: pre-wrap;
   height: 80px;
-  border-top: 1px solid white;;
+  border-top: 1px solid white;
+
 }
 
 .hour {
