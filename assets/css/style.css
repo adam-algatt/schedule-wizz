@@ -16,7 +16,7 @@ body {
 }
 
 .row {
-  height: 12.5vw;
+  height: 100 vw;
 }
 
 #save-button {
@@ -85,22 +85,25 @@ textarea{
   color: #000000;
   border-top: 1px dashed #000000;
 }
-
-.past {
-  background-color: #d3d3d3;
+*/
+#past {
+  background-color: lightgrey;
   color: white;
+  height: calc(100vh/8);
 }
 
-.present {
-  background-color: #ff6961;
+#present {
+  background-color: red;
   color: white;
+  height: calc(100vh/8);
 }
 
-.future {
-  background-color: #77dd77;
+#future {
+  background-color: green;
   color: white;
+  height: calc(100vh/8);
 }
-
+/*
 .saveBtn {
   border-left: 1px solid black;
   border-top-right-radius: 15px;
