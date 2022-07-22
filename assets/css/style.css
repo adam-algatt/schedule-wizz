@@ -1,91 +1,15 @@
-/* * {
-  padding: 0;
-  margin: 0;
-}
-/*
+
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: clamp(10px, 14px, 16px); 
-  /* line-height: 1;
-}
- */
-
-#schedule {
-  min-height: fit-content; 
-  width: clamp(fit-content, 97vw, 97vw);
+ line-height: 1;
 }
 
-.row {
-  height: 100 vw;
-}
-
-#save-button {
-min-width: fit-content; 
-min-height: fit-content; 
-}
-
-/*
-textarea{
-  background: transparent;
-  border: none;
-  resize: none;
-  color: #000000;
-  border-left: 1px solid black;
-  padding: 10px;
-} */
-
-/* .jumbotron {
+ .jumbotron {
   text-align: center;
-  background-color: transparent;
-  color: black;
   border-radius: 0;
-  border-bottom: 10px solid black;
-} */ 
-/* delete .description class once implementation of appendchild has been added to change description styling based on current time/date*/
-/* .description{
-  white-space: pre-wrap;
-  list-style: none;
-  background-color: green;
-  height: 80px;
-} */
-/* delete .description class once implementation of appendchild has been added to change description styling based on current time/date*/
-/* 
-.description-future{
-  white-space: pre-wrap;
-  list-style: none;
-  background-color: green;
-  min-height: fit-content;
-}
-.description-present{
-  white-space: pre-wrap;
-  list-style: none;
-  background-color: orange;
-  min-height: fit-content;
-}
-.description-past{
-  white-space: pre-wrap;
-  list-style: none;
-  background-color: gray;
-  min-height: fit-content;
-}
+} 
 
-.time-block{
-  text-align: left;
-  border-radius: 15px;
-  min-height: fit-content;
-}
-
-.row {
-  white-space: pre-wrap;
-  min-height: fit-content;
-}
-
-.hour {
-  background-color: #ffffff;
-  color: #000000;
-  border-top: 1px dashed #000000;
-}
-*/
 #past {
   background-color: lightgrey;
   color: white;
@@ -93,7 +17,7 @@ textarea{
 }
 
 #present {
-  background-color: red;
+  background-color: #ff726f;
   color: white;
   height: calc(100vh/8);
 }
@@ -103,17 +27,4 @@ textarea{
   color: white;
   height: calc(100vh/8);
 }
-/*
-.saveBtn {
-  border-left: 1px solid black;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  background-color: #06AED5;
-  color: white;
-  min-width: fit-content;
-}
 
-.saveBtn i:hover {
-  font-size: 20px;
-  transition: all .3s ease-in-out;
-} */
