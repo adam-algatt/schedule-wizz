@@ -1,0 +1,30 @@
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: clamp(10px, 14px, 16px); 
+  line-height: 1;
+}
+
+ .jumbotron {
+  text-align: center;
+  border-radius: 0;
+} 
+
+#past {
+  background-color: lightgrey;
+  color: white;
+  height: calc(100vh/8);
+}
+
+#present {
+  background-color: #ff726f;
+  color: white;
+  height: calc(100vh/8);
+}
+
+#future {
+  background-color: green;
+  color: white;
+  height: calc(100vh/8);
+}
+
