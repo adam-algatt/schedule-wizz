@@ -1,9 +1,9 @@
-
 //set current date in header
-let divIds = ['9', '10', '11', '12', '13', '14', '15', '16'];
-const divContainer = $('#hour-container');
-const scheduleContainer = $('#schedule');
 $('#date').text(moment().format('dddd, MMMM Do YYYY'));
+// array holding standard work day hours
+let divIds = ['9', '10', '11', '12', '13', '14', '15', '16', '17'];
+const scheduleContainer = $('#schedule');
+// count to ensure schedule rows are only inserted in the schedule container once
 let count = 0;
 
 function setTense() {
@@ -12,7 +12,7 @@ let currentTime = (moment().format('H'));
 
 divIds.forEach((id, index) => {
   let timeDifference =  Number(divIds[index]) - currentTime; 
-  
+  // sets tense for color coding (on first run of setTense)
     if (timeDifference > 0) {
     tense = "future"
   } else if (timeDifference < 0) {
@@ -20,6 +20,7 @@ divIds.forEach((id, index) => {
   } else {
    tense = "present"
   }
+
 if (count === 0) {
   scheduleContainer.append(`<div id=${tense} class="row col-12 border border-dark px-0 rounded">
   <div id="time-${divIds[index]}" class="col-2 text-center my-auto">
@@ -36,9 +37,10 @@ if (count === 0) {
   $('.row').each(function(index, value){
     let button = $(value).children('button');
     let buttonId = $(button).attr('id');
+    // tense stored as .row div id attribute
     let currentTense = this.id; 
    let updatedTimeDifference = buttonId - currentTime;
-  //  console.log(buttonId, updatedTimeDifference, this.id);
+  //changes tense for color coding after initial run of setTense()
    if (updatedTimeDifference > 0 && currentTense !== "future") {
       $(this).removeAttr('id');
       $(this).attr('id', 'future'); 
@@ -60,21 +62,15 @@ count++
 // event listener to handle all child buttons of schedule container
 scheduleContainer.on('click', 'button', function(e) {
   const siblingTextareaId = `notes-${this.id}`
-  console.log(e.target);
   let textarea = $(e.target).siblings('textarea');
- let note = $(textarea).val();
-  console.log(textarea, note);
+  let note = $(textarea).val();
   localStorage.setItem(siblingTextareaId, note);
-//  turn above into var to grab textarea by 'id' and save .val to localStorage
-
-
 })
-
 
 // on document ready call set tense and add 30 second interval for calls
 $(document).ready(() => {
 setTense();
-// run setTense every half minute to color code divs
+// run setTense every half minute to color code schedule section if need be
 setInterval(setTense, 30000 );
 })
 
